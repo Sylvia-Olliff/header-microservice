@@ -2,7 +2,7 @@
 
 var path = process.cwd();
 
-module.exports = function (app, dateCheck) {
+module.exports = function (app, head) {
 	
 	var requestTime = function (req, res, next) {
 		process.env.TZ = 'USA/New York';
@@ -12,16 +12,16 @@ module.exports = function (app, dateCheck) {
 	
 	app.use(requestTime);
 
-	app.get('/', requestedOn, function(req, res) {
-		res.sendFile(path + '/public/index.html');
+	app.get('/', requestedOn, head.capture, function(req, res) {
+		res.send(req.result);
 	});
 	
-	app.post('/*', requestedOn, dateCheck.parse, function(req, res) {
-		res.send(req.date);
+	app.post('/*', requestedOn, function(req, res) {
+		res.redirect('/');
 	});
 	
-	app.get('/*', requestedOn, dateCheck.parse, function(req, res) {
-		res.send(req.date);
+	app.get('/*', requestedOn, function(req, res) {
+		res.redirect('/');
 	});
 };
 
