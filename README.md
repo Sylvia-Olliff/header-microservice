@@ -1,12 +1,12 @@
-# Clementine.js FCC Boilerplate
-
-[![Join the chat at https://gitter.im/johnstonbl01/clementinejs](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/johnstonbl01/clementinejs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Joe Olliff API Project header-microservice for FreeCodeCamp
 
 ## Overview
 
-Clementine.js is a lightweight boilerplate for fullstack JavaScript development which utilizes MongoDB, Express and Node.js. The boilerplate errs on the side of transparency and simplicity, making it an ideal starting point for beginner and seasoned developers alike. 
+This project is for FreeCodeCamp, this is the Header Microservice. 
 
-The [Free Code Camp](http://www.freecodecamp.com) version of Clementine.js is meant for use when completing projects as part of the FCC curriculum. This version includes GitHub authentication using [Passport](http://passportjs.org/).
+It captures the header information of the browser used to request data from it. It is set to redirect all GETS and POSTS submitted to the site back to the '/'.
+
+This uses a stripped down version of Clementine.js
 
 ## Versions
 
